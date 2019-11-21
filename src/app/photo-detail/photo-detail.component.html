@@ -1,0 +1,16 @@
+<div *ngIf="photo; else nothing">
+  <h4>
+    {{photo.title}}
+  </h4>
+  <p>
+    {{photo.url}}
+  </p>
+
+  <p>
+    {{photo.thumbnailUrl}}
+  </p>
+</div>
+
+<ng-template #nothing>
+  <p>Nothing to show</p>
+</ng-template>

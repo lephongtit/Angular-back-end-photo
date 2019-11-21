@@ -1,0 +1,36 @@
+<form [formGroup]="photoForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>
+      Title
+      <br>
+      <input type="text" formControlName="title">
+    </label>
+  </div>
+  <div *ngIf="photoForm.get('title').invalid && photoForm.get('title').touched" style="color: red">
+    Title is required and min length is 10
+  </div>
+  <div>
+    <label>
+      URL
+      <br>
+      <input type="text" formControlName="url">
+    </label>
+  </div>
+  <div *ngIf="photoForm.get('url').invalid && photoForm.get('url').touched" style="color: red">
+  </div>
+
+
+  <div>
+    <label>
+      ThumbnailUrl
+      <br>
+      <input type="text" formControlName="thumbnailUrl">
+    </label>
+  </div>
+  <div *ngIf="photoForm.get('thumbnailUrl').invalid && photoForm.get('thumbnailUrl').touched" style="color: red">
+
+  </div>
+
+
+  <button type="submit">Submit</button>
+</form>
